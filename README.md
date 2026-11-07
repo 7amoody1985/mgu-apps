@@ -28,14 +28,17 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 
 ## Adding an app
 
+The step-by-step checklist (also for coding agents) is [AGENTS.md](AGENTS.md); in short:
+
 1. Put the built package in `packages/` as `<id>@<x.y.z>.tgz` (not committed: it goes into the release only).
    The package's `package.json` names the same id and version, and it holds no BMW SDK (`node_modules/oap-sdk`).
 2. Add the app to `apps.json`: `id`, `kind` (`app` or `tool`), `title`, `description`, `version`, and as needed
    `requires` (`{"<id>": "<min version>"}`, also from other sources), `mguHmi` (`["ID7"]`), `uninstallable`,
    `icon` (a PNG in `icons/`, at most 128 KiB) and `"build": "unit"` for a source package the head unit builds.
-   The id needs a prefix of your own (`mdq_myapp`), never one BMW or another source uses.
+   The id takes this source's prefix `mdq_` (`mdq_myapp`), never one BMW or another source uses.
 3. Publish: `powershell -File tools\publish.ps1` (Python 3 and the GitHub CLI, signed in). It writes `dist/`
    (`catalog.json`, the packages, the icons) and uploads it to the `catalog` release.
-4. On the car: **Settings → Check now** in the Store.
+4. Check it as the car sees it: `python -I tools/verify.py` (ends with `all ok`).
+5. On the car: **Settings → Check now** in the Store.
 
 The catalog format: [Publishing for the MGU Store](https://github.com/robertnisipeanu/mgu-store/blob/main/docs/PUBLISHING.md).
