@@ -3,6 +3,12 @@
 A source for the [MGU Store](https://github.com/robertnisipeanu/mgu-store) on BMW iDrive 7 head units (MGU).
 Unofficial: nothing here is made, endorsed or supported by BMW AG.
 
+> [!WARNING]
+> **Everything in this repository is experimental.** The apps are personal projects, tried on one car (a G05 X5
+> with iDrive 7) or not yet tried in a car at all. They may not work on yours, may stop working after a head-unit
+> update, and come with no warranty or support. Install them at your own risk, with the car parked, and keep
+> your eyes on the road.
+
 ## Add it to the Store
 
 In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick **Releases**. The Store reads
@@ -13,6 +19,18 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 | App | Version | What it is |
 |---|---|---|
 | RideTube (fork) | 0.3.8 | A modified build of [JustAnotherPU's RideTube](https://github.com/JustAnotherPU/ridetube), a YouTube client. Fixes the Search menu (which holds the settings) closing right after it opens. Not endorsed by the original developer. Source and changes: [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube). |
+| CarLink (experimental) | 0.1.0 | The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget. **Not yet tried in a car.** |
+
+### CarLink (experimental)
+
+- **Status: first version, not yet tried in a car.** Tested on a PC in the kit's emulator only.
+- It shows what the CarLink phone app sends: that app reads the navigation notification of HudHud or Google
+  Maps and draws the turn card (arrow, distance, street, arrival time), and sends it over the car's Wi-Fi to
+  port 47800. The phone app isn't published yet.
+- **Demo** (on the app's screen) shows turns without the phone, to try the cluster and the widget.
+- Needs **cluster-render**, the cluster renderer from the `robertnisipeanu/idrive-apps` source (Waze on cluster
+  installs it too); the Store installs it first. It doesn't touch CarPlay or Android Auto.
+- Settings: show on the cluster (on), on the HUD (off), and how long a quiet phone may be before the card goes.
 
 ### RideTube (fork)
 

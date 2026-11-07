@@ -11,6 +11,18 @@
       "uninstallable": true,
       "mguHmi": ["ID7"],
       "icon": "jap_ridetube.png"
+    },
+    {
+      "id": "mdq_carlink",
+      "kind": "app",
+      "title": "CarLink (experimental)",
+      "description": "Experimental. The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget, sent by the CarLink phone app over the car's Wi-Fi. Demo shows it without the phone. Needs cluster-render from the robertnisipeanu/idrive-apps source.",
+      "author": "7amoody1985",
+      "version": "0.1.0",
+      "requires": { "cluster-render": "0.4.0" },
+      "uninstallable": true,
+      "mguHmi": ["ID7"],
+      "icon": "mdq_carlink.png"
     }
   ]
 }
