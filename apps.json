@@ -1,0 +1,16 @@
+{
+  "components": [
+    {
+      "id": "jap_ridetube",
+      "kind": "app",
+      "title": "RideTube (fork by 7amoody1985)",
+      "description": "A modified build of JustAnotherPU's RideTube (github.com/JustAnotherPU/ridetube), not endorsed by its developer. Fixes the Search menu (and the settings in it) closing right after it opens. Needs the RideTube service jap-ridetube-d from the JustAnotherPU/ridetube source. Source: github.com/7amoody1985/ridetube",
+      "author": "JustAnotherPU, modified by 7amoody1985",
+      "version": "0.3.8",
+      "requires": { "jap-ridetube-d": "0.3.8", "mgu-render": "0.6.11", "mgu-inputgate": "1.0.0" },
+      "uninstallable": true,
+      "mguHmi": ["ID7"],
+      "icon": "jap_ridetube.png"
+    }
+  ]
+}
