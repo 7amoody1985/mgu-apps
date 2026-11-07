@@ -47,7 +47,8 @@ release tagged `catalog`; that file lists **every** app of this source, so one s
 ## Do not
 
 - Commit packages, `dist\` or anything holding BMW's SDK.
-- Change the `jap_ridetube` entry: it is the RideTube fork (https://github.com/7amoody1985/ridetube,
-  checkout `..\ridetube`), whose package comes from that repo's `tools/patch_package.py`.
+- Change the `jap_ridetube` or `jap-ridetube-d` entries: they are the RideTube fork
+  (https://github.com/7amoody1985/ridetube, checkout `..\ridetube`), whose packages come from that repo's
+  `tools/patch_package.py` and `tools/patch_service.py`.
 - Re-create or rename the `catalog` release, or publish it as a draft or prerelease: the Store reads only a
   published release named exactly `catalog`.

@@ -18,7 +18,7 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 
 | App | Version | What it is |
 |---|---|---|
-| RideTube (fork) | 0.3.8 | A modified build of [JustAnotherPU's RideTube](https://github.com/JustAnotherPU/ridetube), a YouTube client. Fixes the Search menu (which holds the settings) closing right after it opens. Not endorsed by the original developer. Source and changes: [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube). |
+| RideTube (fork) | app 0.3.9, service 0.4.0 | A modified build of [JustAnotherPU's RideTube](https://github.com/JustAnotherPU/ridetube), a YouTube client. Fixes the Search menu (which holds the settings) closing right after it opens; the service streams the video in RAM instead of writing it to the head unit's flash, and keeps a debug report. Not endorsed by the original developer. Source and changes: [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube). |
 | CarLink (experimental) | 0.1.1 | The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget. **Not yet tried in a car.** |
 
 ### CarLink (experimental)
@@ -36,15 +36,25 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 
 ### RideTube (fork)
 
-- Keep the sources `JustAnotherPU/ridetube:releases` and `JustAnotherPU/mgu-apps:releases`: the RideTube service
-  (`jap-ridetube-d`) and Node.js 22 still come from them. Only the app comes from here.
-- The app keeps RideTube's id, `jap_ridetube`. The Store updates an installed app only from the source it came
-  from, so if RideTube is installed from JustAnotherPU's source, **uninstall the RideTube app** first (not its
-  service), then install it from this source. The YouTube sign-in is kept: the service holds it.
-- To go back to the original: uninstall it here, then install RideTube from `JustAnotherPU/ridetube`.
-- Licence: GPL-3.0-or-later, as the original (the licence texts are in the package); the source of this build is
-  [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube), its package made with its
-  `tools/patch_package.py`.
+- **Status: the service's RAM streaming (0.4.0) is not yet tried in a car.** Tested on a PC with its tests only.
+- This source offers both the app (`jap_ridetube`) and its service (`jap-ridetube-d`), with RideTube's own ids.
+  Keep `JustAnotherPU/mgu-apps:releases`: Node.js 22 (`jap-node22`) still comes from it.
+- The Store updates an installed app or tool only from the source it came from. If RideTube came from
+  JustAnotherPU's source: **uninstall the RideTube app and then the RideTube service** there, then install
+  RideTube from this source (it installs this source's service first). Uninstalling the service deletes the
+  YouTube sign-in: sign in again in the app.
+- **The video in RAM:** the service mounts a 256 MB RAM disk and keeps only about two and a half minutes of the
+  playing video in it, instead of writing the whole video to flash. Seeking back more than 45 s fetches it again
+  (a short pause). Videos it can't stream that way (very long ones, about 90 minutes and up) go to flash as before.
+- **Debug report:** `/run/jap-ridetube-d/status.json` (RAM, memory, the stream, refreshed every 10 s while in use)
+  and `/var/opt/jap-ridetube-d/log/sessions.jsonl` (one line a play). Neither holds what you watched. Over the
+  car's hotspot: `ssh root@172.16.222.97 cat /run/jap-ridetube-d/status.json`. The fields:
+  [the service's README](https://github.com/7amoody1985/ridetube/blob/main/native/jap-ridetube-d/README.md).
+- To go back to the original: uninstall the app and the service here, then install RideTube from
+  `JustAnotherPU/ridetube`.
+- Licence: GPL-3.0-or-later, as the original (the licence texts are in the packages); the source of this build is
+  [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube), its packages made with its
+  `tools/patch_package.py` and `tools/patch_service.py`.
 
 ## Adding an app
 
