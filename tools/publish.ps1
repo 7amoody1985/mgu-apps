@@ -11,8 +11,10 @@ python -I tools/make_catalog.py
 if ($LASTEXITCODE -ne 0) { throw 'make_catalog.py failed' }
 $files = Get-ChildItem dist -File | ForEach-Object { $_.FullName }
 
-& $gh release view catalog *> $null
-if ($LASTEXITCODE -ne 0) {
+# (a list, not `release view`: its "release not found" on stderr stops Windows PowerShell 5.1 here)
+$tags = @(& $gh release list --limit 100 --json tagName --jq '.[].tagName')
+if ($LASTEXITCODE -ne 0) { throw 'gh release list failed' }
+if ($tags -notcontains 'catalog') {
     & $gh release create catalog --title 'Store catalog' --notes 'The MGU Store reads catalog.json from this release. Add the source 7amoody1985/mgu-apps:releases in the Store.' $files
     if ($LASTEXITCODE -ne 0) { throw 'gh release create failed' }
 } else {
