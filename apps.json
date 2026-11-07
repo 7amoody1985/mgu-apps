@@ -18,7 +18,7 @@
       "title": "RideTube service (fork by 7amoody1985)",
       "description": "The car side of RideTube (JustAnotherPU's, modified): yt-dlp fetches on the car, the sound through the BMW MediaPlayer, the picture decoded by ytdec. Fork: the playing video streams in RAM (a 256 MB tmpfs) instead of being written whole to the head unit's flash; a debug report in /run/jap-ridetube-d/status.json and log/sessions.jsonl. Needs Node.js 22 from the JustAnotherPU/mgu-apps source. Source: github.com/7amoody1985/ridetube",
       "author": "JustAnotherPU, modified by 7amoody1985",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "requires": { "mgu-deploy": "0.7.0", "mgu-python": "1.0.2", "jap-node22": "22.23.4", "mgu-render": "0.6.11" },
       "uninstallable": true,
       "mguHmi": ["ID7"]
