@@ -19,7 +19,7 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 | App | Version | What it is |
 |---|---|---|
 | RideTube (fork) | 0.3.8 | A modified build of [JustAnotherPU's RideTube](https://github.com/JustAnotherPU/ridetube), a YouTube client. Fixes the Search menu (which holds the settings) closing right after it opens. Not endorsed by the original developer. Source and changes: [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube). |
-| CarLink (experimental) | 0.1.0 | The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget. **Not yet tried in a car.** |
+| CarLink (experimental) | 0.1.1 | The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget. **Not yet tried in a car.** |
 
 ### CarLink (experimental)
 
@@ -31,6 +31,8 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 - Needs **cluster-render**, the cluster renderer from the `robertnisipeanu/idrive-apps` source (Waze on cluster
   installs it too); the Store installs it first. It doesn't touch CarPlay or Android Auto.
 - Settings: show on the cluster (on), on the HUD (off), and how long a quiet phone may be before the card goes.
+- **Debug mode** (0.1.1): the phone app's Car log screen reads this app's log file, its live log and a status
+  snapshot (the phone link, the route, cluster-render's layers and targets) over the same link.
 
 ### RideTube (fork)
 
