@@ -1,27 +1,40 @@
 {
   "components": [
     {
-      "id": "jap_ridetube",
+      "id": "mdq_ridetube",
       "kind": "app",
       "title": "RideTube (fork by 7amoody1985)",
-      "description": "A modified build of JustAnotherPU's RideTube (github.com/JustAnotherPU/ridetube), not endorsed by its developer. Fixes the Search menu (and the settings in it) closing right after it opens, and redraws less often. Needs this source's RideTube service 0.4.0, which streams the video in RAM instead of writing it to flash: uninstall the original RideTube and its service first. Source: github.com/7amoody1985/ridetube",
+      "description": "A modified build of JustAnotherPU's RideTube (github.com/JustAnotherPU/ridetube), not endorsed by its developer, with its own ids: it installs beside the original and never over it (only one of them plays at a time). Fixes the Search menu (and the settings in it) closing right after it opens; its service streams the video in RAM instead of writing it to the head unit's flash. Source: github.com/7amoody1985/ridetube",
       "author": "JustAnotherPU, modified by 7amoody1985",
-      "version": "0.3.9",
-      "requires": { "jap-ridetube-d": "0.4.0", "mgu-render": "0.6.11", "mgu-inputgate": "1.0.0" },
+      "version": "0.4.0",
+      "requires": {
+        "mdq-ridetube-d": "0.4.2",
+        "mgu-render": "0.6.11",
+        "mgu-inputgate": "1.0.0"
+      },
       "uninstallable": true,
-      "mguHmi": ["ID7"],
-      "icon": "jap_ridetube.png"
+      "mguHmi": [
+        "ID7"
+      ],
+      "icon": "mdq_ridetube.png"
     },
     {
-      "id": "jap-ridetube-d",
+      "id": "mdq-ridetube-d",
       "kind": "tool",
       "title": "RideTube service (fork by 7amoody1985)",
-      "description": "The car side of RideTube (JustAnotherPU's, modified): yt-dlp fetches on the car, the sound through the BMW MediaPlayer, the picture decoded by ytdec. Fork: the playing video streams in RAM (a 256 MB tmpfs) instead of being written whole to the head unit's flash; a debug report in /run/jap-ridetube-d/status.json and log/sessions.jsonl. Needs Node.js 22 from the JustAnotherPU/mgu-apps source. Source: github.com/7amoody1985/ridetube",
+      "description": "The car side of the RideTube fork (JustAnotherPU's RideTube, modified, with its own ids): yt-dlp fetches on the car, the sound through the BMW MediaPlayer, the picture decoded by ytdec. The playing video streams in RAM (a 256 MB tmpfs) instead of being written whole to the head unit's flash; a debug report in /run/mdq-ridetube-d/status.json and log/sessions.jsonl. Needs Node.js 22 from the JustAnotherPU/mgu-apps source. Source: github.com/7amoody1985/ridetube",
       "author": "JustAnotherPU, modified by 7amoody1985",
-      "version": "0.4.1",
-      "requires": { "mgu-deploy": "0.7.0", "mgu-python": "1.0.2", "jap-node22": "22.23.4", "mgu-render": "0.6.11" },
+      "version": "0.4.2",
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.2",
+        "jap-node22": "22.23.4",
+        "mgu-render": "0.6.11"
+      },
       "uninstallable": true,
-      "mguHmi": ["ID7"]
+      "mguHmi": [
+        "ID7"
+      ]
     },
     {
       "id": "mdq_carlink",
@@ -30,9 +43,13 @@
       "description": "Experimental. The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget, sent by the CarLink phone app over the car's Wi-Fi. Demo shows it without the phone. Needs cluster-render from the robertnisipeanu/idrive-apps source.",
       "author": "7amoody1985",
       "version": "0.1.2",
-      "requires": { "cluster-render": "0.4.0" },
+      "requires": {
+        "cluster-render": "0.4.0"
+      },
       "uninstallable": true,
-      "mguHmi": ["ID7"],
+      "mguHmi": [
+        "ID7"
+      ],
       "icon": "mdq_carlink.png"
     }
   ]
