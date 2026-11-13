@@ -20,6 +20,13 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 |---|---|---|
 | RideTube (fork) | app 0.4.0, service 0.4.2 | A modified build of [JustAnotherPU's RideTube](https://github.com/JustAnotherPU/ridetube), a YouTube client. Fixes the Search menu (which holds the settings) closing right after it opens; the service streams the video in RAM instead of writing it to the head unit's flash, and keeps a debug report. Not endorsed by the original developer. Its own ids (`mdq_ridetube`, `mdq-ridetube-d`): it installs beside the original. Source and changes: [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube). |
 | CarLink (experimental) | 0.1.2 | The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget. **Not yet tried in a car.** |
+| Heritage Cluster (experimental) | 0.1.0 | **⚠ Still under development, not yet tested in a real car. Use at your own risk** (see below). Classic X5 instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E53's lit analogue dials (with their warning LEDs, LCDs and lamps) and the F15's digital display in Comfort and Sport. Needs the cluster renderer (`cluster-render`) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. Laid out for a G05 X5; iDrive 7 only. **Not yet tried in a car.** |
+
+### Heritage Cluster: read before installing
+
+Heritage Cluster is still under development and **has not yet been tested in a real car**; a test in a car is coming soon. While it runs, it replaces the picture on your instrument cluster. Install and use it entirely at your own risk: try it parked first, and uninstall it if anything looks wrong (the stock cluster comes back when the app stops or is removed). BMW's own warning lights stay on top of it, but it is not a certified instrument display, so don't rely on it to drive.
+
+It is provided "as is", without warranty of any kind. The author is not responsible for any damage, fault, fine, injury or other consequence of installing or using it. It is not made, endorsed or supported by BMW AG.
 
 ### CarLink (experimental)
 

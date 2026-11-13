@@ -51,6 +51,22 @@
         "ID7"
       ],
       "icon": "mdq_carlink.png"
+    },
+    {
+      "id": "mdq_heritage",
+      "kind": "app",
+      "title": "Heritage Cluster (experimental)",
+      "description": "STILL UNDER DEVELOPMENT, NOT YET TESTED IN A REAL CAR (a test in a car is coming soon). Classic X5 instrument clusters (E53, F15) shown on your car's digital cluster in place of the stock dials. For iDrive 7 with the 12.3-inch cluster; laid out for a G05 X5. Use it at your own risk: try it parked first and uninstall it if anything looks wrong. Provided as is, with no warranty; the author is not responsible for any damage, fault or other consequence of using it.",
+      "author": "7amoody1985",
+      "version": "0.1.0",
+      "requires": {
+        "cluster-render": "0.5.3"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7"
+      ],
+      "icon": "mdq_heritage.png"
     }
   ]
 }
