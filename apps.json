@@ -4,7 +4,7 @@
       "id": "mdq_heritage",
       "kind": "app",
       "title": "Heritage Cluster (experimental)",
-      "description": "STILL UNDER DEVELOPMENT, NOT YET TESTED IN A REAL CAR (a test in a car is coming soon). Classic BMW instrument clusters shown on your car's digital cluster in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) and the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport. For any iDrive 7 car with the 12.3-inch cluster; laid out on a G05 X5. Use it at your own risk: try it parked first and uninstall it if anything looks wrong. Provided as is, with no warranty; the author is not responsible for any damage, fault or other consequence of using it.",
+      "description": "Classic BMW instrument clusters on your car's digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) and the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport. For any iDrive 7 car with the 12.3-inch cluster. Built on a G05 X5, not yet tested in a car: try it parked first. Provided as is, without warranty.",
       "author": "7amoody1985",
       "version": "0.2.0",
       "requires": {
