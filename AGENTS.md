@@ -1,6 +1,9 @@
 # Publishing to 7amoody1985/mgu-apps (for agents)
 
-This repository is an MGU Store source (BMW iDrive 7 head units). The car reads `catalog.json` from the GitHub
+This repository is the public MGU Store source (BMW iDrive 7 head units) for **released** apps (released, still
+being tested): Heritage Cluster. The user's personal, very experimental apps (the RideTube fork, CarLink) are in
+the private source 7amoody1985/mgu-apps-lab (`..\mgu-apps-lab`). An app is in one of the two, never both: the
+Store refuses a catalog package whose id another source's app already holds on the car. The car reads `catalog.json` from the GitHub
 release tagged `catalog`; that file lists **every** app of this source, so one source offers them all.
 `apps.json` (committed) is the list it is made from. Packages are release assets only, never committed.
 
@@ -47,9 +50,8 @@ release tagged `catalog`; that file lists **every** app of this source, so one s
 ## Do not
 
 - Commit packages, `dist\` or anything holding BMW's SDK.
-- Change the `mdq_ridetube` or `mdq-ridetube-d` entries: they are the RideTube fork
-  (https://github.com/7amoody1985/ridetube, checkout `..\ridetube`), whose packages come from that repo's
-  `tools/build_app.sh` and `tools/build_service.sh`.
+- List an app here that `mgu-apps-lab` also lists, or move one between the sources without telling the user that
+  the car must uninstall it and install it again from the other source.
 - Publish anything under another source's id (`jap_...` is JustAnotherPU's): the Store would install it over
   theirs. Every id here starts with `mdq_` / `mdq-`.
 - Re-create or rename the `catalog` release, or publish it as a draft or prerelease: the Store reads only a

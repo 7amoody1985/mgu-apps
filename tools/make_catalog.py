@@ -4,7 +4,7 @@ ready to upload as the assets of the GitHub release tagged `catalog` (tools/publ
 
 apps.json lists each component the source offers: an app or tool with its package file in packages/
 (not committed: release assets only) and, optionally, an icon in icons/ (PNG, at most 128 KiB).
-Requirements may name components of other sources (RideTube's service comes from JustAnotherPU/ridetube).
+Requirements may name components of other sources (cluster-render comes from robertnisipeanu/idrive-apps).
 
     python3 tools/make_catalog.py [--repo owner/name]
 

@@ -4,10 +4,10 @@ A source for the [MGU Store](https://github.com/robertnisipeanu/mgu-store) on BM
 Unofficial: nothing here is made, endorsed or supported by BMW AG.
 
 > [!WARNING]
-> **Everything in this repository is experimental.** The apps are personal projects, tried on one car (a G05 X5
-> with iDrive 7) or not yet tried in a car at all. They may not work on yours, may stop working after a head-unit
-> update, and come with no warranty or support. Install them at your own risk, with the car parked, and keep
-> your eyes on the road.
+> **Released, but still being tested.** The apps here are released for anyone to try, but they have been tried
+> on one car (a G05 X5 with iDrive 7) or not yet in a car at all. They may not work on yours, may stop working after
+> a head-unit update, and come with no warranty or support. Install them at your own risk, with the car parked,
+> and keep your eyes on the road.
 
 ## Add it to the Store
 
@@ -18,8 +18,6 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 
 | App | Version | What it is |
 |---|---|---|
-| RideTube (fork) | app 0.4.0, service 0.4.2 | A modified build of [JustAnotherPU's RideTube](https://github.com/JustAnotherPU/ridetube), a YouTube client. Fixes the Search menu (which holds the settings) closing right after it opens; the service streams the video in RAM instead of writing it to the head unit's flash, and keeps a debug report. Not endorsed by the original developer. Its own ids (`mdq_ridetube`, `mdq-ridetube-d`): it installs beside the original. Source and changes: [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube). |
-| CarLink (experimental) | 0.1.2 | The next turn from HudHud or Google Maps on your phone, in the middle of the instrument cluster and as a home-screen widget. **Not yet tried in a car.** |
 | Heritage Cluster (experimental) | 0.2.0 | **⚠ Still under development, not yet tested in a real car. Use at your own risk** (see below). Classic BMW instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) with its warning LEDs, LCDs and lamps, and the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport. For any iDrive 7 car with the 12.3-inch cluster; laid out on a G05 X5. Needs the cluster renderer (`cluster-render`) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. Screenshots below. **Not yet tried in a car.** |
 
 ### Heritage Cluster: read before installing
@@ -43,42 +41,11 @@ As the app draws them on the 12.3-inch cluster (rendered on a PC through the app
 
 **Which cars.** Any BMW with iDrive 7 and the 12.3-inch cluster (Live Cockpit Professional): every one gives apps the same 1920x720 cluster panel. The layout keeps clear of the G05's driver camera and glass corners, so it fits cars without them too. Units, rev counter (petrol or diesel) and tank size are settings; on M cars the F-series display follows M Drive's engine mode. Where there is no such panel, the app draws nothing and says why on its own screen.
 
-### CarLink (experimental)
+### No longer here
 
-- **Status: first version, not yet tried in a car.** Tested on a PC in the kit's emulator only.
-- It shows what the CarLink phone app sends: that app reads the navigation notification of HudHud or Google
-  Maps and draws the turn card (arrow, distance, street, arrival time), and sends it over the car's Wi-Fi to
-  port 47800. The phone app isn't published yet.
-- **Demo** (on the app's screen) shows turns without the phone, to try the cluster and the widget.
-- Needs **cluster-render**, the cluster renderer from the `robertnisipeanu/idrive-apps` source (Waze on cluster
-  installs it too); the Store installs it first. It doesn't touch CarPlay or Android Auto.
-- Settings: show on the cluster (on), on the HUD (off), and how long a quiet phone may be before the card goes.
-- **Debug mode** (0.1.1): the phone app's Car log screen reads this app's log file, its live log and a status
-  snapshot (the phone link, the route, cluster-render's layers and targets) over the same link. Since 0.1.2
-  also the RideTube fork service's debug report (`status.json` and its recent plays from `sessions.jsonl`),
-  when that service is installed; neither holds what was watched.
-
-### RideTube (fork)
-
-- **Status: the service's RAM streaming is not yet tried in a car.** Tested on a PC: its tests, and a live
-  streaming check against YouTube.
-- **Its own ids:** the app is `mdq_ridetube` (the tile says "RideTube (fork)"), its service `mdq-ridetube-d`.
-  It installs beside JustAnotherPU's RideTube (`jap_ridetube`, `jap-ridetube-d`) and never over it; both can be
-  installed, but only one plays at a time. Keep `JustAnotherPU/mgu-apps:releases`: Node.js 22 (`jap-node22`)
-  comes from it.
-- **From the fork's 0.3.9 / 0.4.1** (installed here as `jap_ridetube` / `jap-ridetube-d` before 2026-11-09): this
-  source lists those ids no more. Uninstall them (Installed page: the app, then the service), then install
-  **RideTube (fork)**. Sign in to YouTube again: the sign-in belonged to the old service.
-- **The video in RAM:** the service mounts a 256 MB RAM disk and keeps only about two and a half minutes of the
-  playing video in it, instead of writing the whole video to flash. Seeking back more than 45 s fetches it again
-  (a short pause). Videos it can't stream that way (very long ones, about 90 minutes and up) go to flash as before.
-- **Debug report:** `/run/mdq-ridetube-d/status.json` (RAM, memory, the stream, refreshed every 10 s while in use)
-  and `/var/opt/mdq-ridetube-d/log/sessions.jsonl` (one line a play). Neither holds what you watched. Over the
-  car's hotspot: `ssh root@172.16.222.97 cat /run/mdq-ridetube-d/status.json`. The fields:
-  [the service's README](https://github.com/7amoody1985/ridetube/blob/main/native/mdq-ridetube-d/README.md).
-- Licence: GPL-3.0-or-later, as the original (the licence texts are in the packages); the source of this build is
-  [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube), its packages made with its
-  `tools/build_app.sh` and `tools/build_service.sh`.
+The RideTube fork (`mdq_ridetube`, `mdq-ridetube-d`) and CarLink (`mdq_carlink`) were listed here until 2026-11-17.
+They are personal experiments and are no longer offered in this source; installed copies keep working but get no
+updates from it. The RideTube fork's source stays at [7amoody1985/ridetube](https://github.com/7amoody1985/ridetube).
 
 ## Adding an app
 
