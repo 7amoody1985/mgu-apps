@@ -16,7 +16,7 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 
 | App | Version | What it is |
 |---|---|---|
-| Heritage Cluster (experimental) | 0.2.0 | Classic BMW instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) with its warning LEDs, LCDs and lamps, and the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport. For any iDrive 7 car with the 12.3-inch cluster. Needs the cluster renderer (`cluster-render`) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. Built on a G05, not yet tested in a car. Screenshots below. |
+| Heritage Cluster (experimental) | 0.3.0 | Classic BMW instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) with its warning LEDs, LCDs and lamps, the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport, and the F-series M analogue cluster (M3 F80, M4 F82) by night or day. For any iDrive 7 car with the 12.3-inch cluster. Needs the cluster renderer (`cluster-render`) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. Built on a G05, not yet tested in a car. Screenshots below. |
 
 ### Heritage Cluster
 
@@ -34,8 +34,10 @@ As the app draws them on the 12.3-inch cluster (rendered on a PC through the app
 | ![E-series, night](screenshots/heritage/x5_e53_night.png) | ![E-series, day](screenshots/heritage/x5_e53_day.png) |
 | **F-series (X5 F15, X6, 5 and 7 Series), Comfort by day** | **F-series, Comfort at night** |
 | ![F-series, Comfort by day](screenshots/heritage/x5_f15_comfort.png) | ![F-series, Comfort at night](screenshots/heritage/x5_f15_night.png) |
-| **F-series, Sport** (follows the drive mode) |  |
-| ![F-series, Sport](screenshots/heritage/x5_f15_sport.png) |  |
+| **F-series, Sport** (follows the drive mode) | **F-series M (M3 F80, M4 F82), night** |
+| ![F-series, Sport](screenshots/heritage/x5_f15_sport.png) | ![F-series M, night](screenshots/heritage/f80_m3.png) |
+| **F-series M, day** |  |
+| ![F-series M, day](screenshots/heritage/f80_m3_day.png) |  |
 
 **Which cars.** Any BMW with iDrive 7 and the 12.3-inch cluster (Live Cockpit Professional): every one gives apps the same 1920x720 cluster panel. The layout keeps clear of the G05's driver camera and glass corners, so it fits cars without them too. Units, rev counter (petrol or diesel) and tank size are settings; on M cars the F-series display follows M Drive's engine mode. Where there is no such panel, the app draws nothing and says why on its own screen.
 
