@@ -4,7 +4,7 @@
       "id": "mdq_heritage",
       "kind": "app",
       "title": "Heritage Cluster (experimental)",
-      "description": "Classic BMW instrument clusters on your car's digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39), the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport, and the F-series M analogue cluster (M3 F80, M4 F82), by night, by day or following the car's lights. For any iDrive 7 car with the 12.3-inch cluster. 0.3.2 fills the cluster with every face, leaves the car's own warning lights and strip to the car, and smooths the needles; not yet tried in a car: try it parked first. Provided as is, without warranty.",
+      "description": "Classic BMW instrument clusters on your car's digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39), the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport, and the F-series M analogue cluster (M3 F80, M4 F82), by night, by day or following the car's lights. For any iDrive 7 car with the 12.3-inch cluster. 0.3.2 fills the cluster with every face, leaves the car's own warning lights and strip to the car, and smooths the needles. Works on a G05 X5; try it parked first. Provided as is, without warranty.",
       "author": "7amoody1985",
       "version": "0.3.2",
       "requires": {
