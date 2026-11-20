@@ -3,11 +3,6 @@
 A source for the [MGU Store](https://github.com/robertnisipeanu/mgu-store) on BMW iDrive 7 head units (MGU).
 Unofficial: nothing here is made, endorsed or supported by BMW AG.
 
-> [!WARNING]
-> **Heritage Cluster is broken: don't install it for now.** It has been tested in a car (a G05 X5) and it doesn't
-> render properly on the instrument cluster. It stays listed until a fixed version is out; if you have it installed,
-> switch it off in its settings or uninstall it, and the stock cluster is back within seconds.
-
 > [!NOTE]
 > The apps here are built on a G05 X5 with iDrive 7. Try them parked first. They come as they are, without
 > warranty or support.
@@ -21,17 +16,17 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 
 | App | Version | What it is |
 |---|---|---|
-| Heritage Cluster (broken, don't install) | 0.3.0 | **Broken: tested in a car, it doesn't render properly. Not advised to install for now.** Classic BMW instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) with its warning LEDs, LCDs and lamps, the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport, and the F-series M analogue cluster (M3 F80, M4 F82) by night or day. For any iDrive 7 car with the 12.3-inch cluster. Needs the cluster renderer (`cluster-render`) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. Screenshots below (as drawn on a PC, not what the car shows today). |
+| Heritage Cluster (experimental) | 0.3.1 | Classic BMW instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) with its warning LEDs, LCDs and lamps, the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport, and the F-series M analogue cluster (M3 F80, M4 F82) by night or day. For any iDrive 7 car with the 12.3-inch cluster. Needs the cluster renderer (`cluster-render` 0.6.0 or newer) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. 0.3.1 fixes what went wrong in the first car test, and is not yet tried in a car. Screenshots below. |
 
 ### Heritage Cluster
 
-**Status: broken.** Tested in a G05 X5, and it doesn't render properly on the cluster, so installing it isn't advised until a fixed version is out. While it runs it replaces the picture on your instrument cluster, so try it parked first; switch it off in its settings, or uninstall it, and the stock cluster is back within seconds. BMW's own warning lights stay on top of it, but it isn't a certified instrument display.
+0.3.0 was tried in a G05 X5 and came up with pieces missing: it needed more of the cluster renderer's memory than there was. 0.3.1 needs about a fifth of it, and if the renderer refuses any part it takes the whole cluster down, so the stock cluster shows. **0.3.1 is not yet tried in a car.** While it runs it replaces the picture on your instrument cluster, so try it parked first; switch it off in its settings, or uninstall it, and the stock cluster is back within seconds. BMW's own warning lights stay on top of it, but it isn't a certified instrument display.
 
 Provided as is, without warranty; use it at your own risk. Not made, endorsed or supported by BMW AG.
 
 #### Screenshots
 
-How it is meant to look, rendered on a PC through the app's own engine at 116 km/h. In the car it doesn't render like this yet. The Store on the car shows no screenshots, so they are here. Pick the cluster, the look and the units in the app's settings.
+As the app draws them on the 12.3-inch cluster (rendered on a PC through the app's own engine, at 116 km/h). The Store on the car shows no screenshots, so they are here. Pick the cluster, the look and the units in the app's settings.
 
 | | |
 |---|---|
