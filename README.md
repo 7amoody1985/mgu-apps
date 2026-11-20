@@ -16,11 +16,11 @@ In the Store: **Settings → Add source**, type `7amoody1985/mgu-apps` and pick 
 
 | App | Version | What it is |
 |---|---|---|
-| Heritage Cluster (experimental) | 0.3.1 | Classic BMW instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) with its warning LEDs, LCDs and lamps, the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport, and the F-series M analogue cluster (M3 F80, M4 F82) by night or day. For any iDrive 7 car with the 12.3-inch cluster. Needs the cluster renderer (`cluster-render` 0.6.0 or newer) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. 0.3.1 fixes what went wrong in the first car test, and is not yet tried in a car. Screenshots below. |
+| Heritage Cluster (experimental) | 0.3.2 | Classic BMW instrument clusters on the car's 12.3-inch digital cluster, in place of the stock dials: the E-series analogue cluster (X5 E53, 5 Series E39) with its warning LEDs and LCDs, the F-series digital display (X5 F15, X6 F16, 5 Series F10, 7 Series F01) in Comfort and Sport, and the F-series M analogue cluster (M3 F80, M4 F82), by night, by day or following the car's lights. For any iDrive 7 car with the 12.3-inch cluster. Needs the cluster renderer (`cluster-render` 0.6.0 or newer) from the `robertnisipeanu/idrive-apps` source, which the Store installs with it. 0.3.2 fixes what the second car test showed, and is not yet tried in a car. Screenshots below. |
 
 ### Heritage Cluster
 
-0.3.0 was tried in a G05 X5 and came up with pieces missing: it needed more of the cluster renderer's memory than there was. 0.3.1 needs about a fifth of it, and if the renderer refuses any part it takes the whole cluster down, so the stock cluster shows. **0.3.1 is not yet tried in a car.** While it runs it replaces the picture on your instrument cluster, so try it parked first; switch it off in its settings, or uninstall it, and the stock cluster is back within seconds. BMW's own warning lights stay on top of it, but it isn't a certified instrument display.
+0.3.1 was tried in a G05 X5: every cluster came up whole, but the E-series and F-series M sat small in the middle of the cluster, the needles lagged, and the car's own warning lights and strip showed over the app's own. 0.3.2 draws every cluster as big as the glass takes it, leaves the warning lights, indicators, time, outside temperature, range and gear to the car (which draws them over the cluster anyway), keeps the needles moving between the car's samples, and has an Auto look that follows the car's day / night. **0.3.2 is not yet tried in a car.** While it runs it replaces the picture on your instrument cluster, so try it parked first; switch it off in its settings, or uninstall it, and the stock cluster is back within seconds. BMW's own warning lights stay on top of it, but it isn't a certified instrument display.
 
 Provided as is, without warranty; use it at your own risk. Not made, endorsed or supported by BMW AG.
 
@@ -39,7 +39,7 @@ As the app draws them on the 12.3-inch cluster (rendered on a PC through the app
 | **F-series M, day** |  |
 | ![F-series M, day](screenshots/heritage/f80_m3_day.png) |  |
 
-**Which cars.** Any BMW with iDrive 7 and the 12.3-inch cluster (Live Cockpit Professional): every one gives apps the same 1920x720 cluster panel. The layout keeps clear of the G05's driver camera and glass corners, so it fits cars without them too. Units, rev counter (petrol or diesel) and tank size are settings; on M cars the F-series display follows M Drive's engine mode. Where there is no such panel, the app draws nothing and says why on its own screen.
+**Which cars.** Any BMW with iDrive 7 and the 12.3-inch cluster (Live Cockpit Professional): every one gives apps the same 1920x720 cluster panel. The layout keeps clear of the G05's driver camera and glass corners, so it fits cars without them too. Units, rev counter (petrol or diesel), the look (Auto, Night or Day) and tank size are settings; on M cars the F-series display follows M Drive's engine mode. Where there is no such panel, the app draws nothing and says why on its own screen.
 
 ### No longer here
 
